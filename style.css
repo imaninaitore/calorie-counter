@@ -31,6 +31,33 @@ body{
 }
 
 .description{
-    color: orangered;
+    color: rgb(2, 17, 32);
 }
+
+.dashboard{
+    background-color: rgb(48, 65, 81);
+    border-radius: 15px;
+    margin: 30px;
+    padding: 20px;
+     display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.stat{
+    text-align: center;
+    color: white;
+}
+
+.stat h3{
+    color: orange;
+    margin-bottom: 5px;
+    font-size: 28px;
+}
+
+.stat p{
+    margin: 0;
+    font-size: 16px;
+}
+
     
