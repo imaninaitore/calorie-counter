@@ -1,0 +1,36 @@
+body{
+    background-color: rgb(226, 232, 237);
+
+}
+
+.nav-bar{
+    background-color:rgb(2, 17, 32);
+    padding: 10px 25px;
+}
+
+#nav-links{
+    display: flex;
+    justify-content:center;
+    gap: 100px;
+    align-items:center;
+}
+
+.nav-links{
+    display: flex;
+    gap: 10px;
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+    padding: 6px 10px;
+    border-radius: 6px;
+    transition: 0.3s ease;
+}
+
+.nav-links:hover{
+    color: orange;
+}
+
+.description{
+    color: orangered;
+}
+    

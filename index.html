@@ -5,22 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>in-check calorie counter</title>
     <script src="https://kit.fontawesome.com/624acf4e3e.js" crossorigin="anonymous"></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
     <div class="nav-bar">
-     <nav>
-        <a href="about">About us</a>
-        <a href="my-dashboard">My Dashboard</a>
-    </nav>   
+        <h1 class="text-2xl font-bold text-white mb-4">
+         <i class="fa-brands fa-nutritionix" style="color: rgb(246, 92, 8);"></i>IN-CHECK<span class="text-orange-400">calorie counter</span>
+        </h1>
+     <nav id="nav-links">
+        
+        <a class="nav-links" href="#about">About us</a>
+        <a class="nav-links" href="#dashboard">My Dashboard</a>
+    </nav>  
     </div>
     
 <body>
-<header>
-        <h1>IN-CHECK calorie counter </h1>
-        <p>This is a calorie counter application that allows users to add, manage, and remove food items while keeping track of daily calorie consumption.</p>
+
+<header id="about">
+    <h2 class="text-2xl font-bold text-slate-800 mb-4">
+       IN-CHECK<span class="text-orange-400">calorie counter</span>
+        </h2>
+        <p class="description">This is a calorie counter application that allows users to add, manage, and remove food items while keeping track of daily calorie consumption.</p>
     </header>
 
-        <div class="Dashboard">
+        <div  id="dashboard" class="Dashboard">
             <p>total calories</p>
             <p>carbs</p>
             <p>fat</p>
@@ -47,12 +55,11 @@
         <!-- Brand -->
         <div>
             <h2 class="text-2xl font-bold text-white mb-4">
-                Cash<span class="text-cyan-400">Map</span>
+                <i class="fa-brands fa-nutritionix" style="color: rgb(246, 92, 8);"></i>IN-CHECK<span class="text-orange-400">calorie counter</span>
             </h2>
 
             <p class="text-slate-400 leading-relaxed">
-                Smart financial tracking and budgeting tools designed to help 
-                you manage money with clarity and confidence.
+                Add, manage, and remove food items while keeping track of daily calorie consumption.
             </p>
         </div>
 
@@ -63,22 +70,16 @@
             </h3>
 
             <ul class="space-y-3">
+
                 <li>
                     <a href="#about" class="hover:text-cyan-400 transition duration-300">
-                        Home
+                        About us
                     </a>
                 </li>
 
                 <li>
-                    <a href="#our-plans" class="hover:text-cyan-400 transition duration-300">
-                        Pricing
-                    </a>
-                </li>
-
-                <li>
-                    <a href="#testimonials" class="hover:text-cyan-400 transition duration-300">
-                        Testimonials
-                    </a>
+                    <a href="#dashboard" class="hover:text-cyan-400 transition duration-300">
+                      Dashboard </a>
                 </li>
             </ul>
         </div>
@@ -118,17 +119,17 @@
             </h3>
 
             <p class="text-slate-400 mb-4">
-                Get the latest updates and financial tips from CashMap.
+                Get the latest updates and tips from IN-CHECK calorie counter.
             </p>
 
             <form class="flex flex-col gap-3">
                 <input 
                     type="email" 
                     placeholder="Enter your email"
-                    class="bg-slate-800 border border-cyan-500/20 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-cyan-400">
+                    class="bg-slate-800 border border-orange-400/20 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-orange-400">
 
                 <button 
-                    class="bg-cyan-500 hover:bg-cyan-400 text-slate-900 font-semibold py-3 rounded-lg transition duration-300">
+                    class="bg-orange-400 hover:bg-orange-200 text-slate-900 font-semibold py-3 rounded-lg transition duration-300">
                     Subscribe
                 </button>
             </form>
@@ -138,7 +139,7 @@
 
     <section id="contact">
         <p class="text-3xl flex justify-center">Contact us </p>
-<div class="social-links flex justify-center gap-6 text-4xl text-cyan-300">
+<div class="social-links flex justify-center gap-6 text-4xl text-orange-400">
                 <a href="https://www.instagram.com/" title="Instagram"><i class="fab fa-instagram"></i></a>
                 <a href="https://www.facebook.com/" title="Facebook"><i class="fab fa-facebook-f"></i></a>
                 <a href="https://www.tiktok.com/en/" title="TikTok"><i class="fab fa-tiktok"></i></a>
@@ -151,7 +152,7 @@
 
     <!-- Bottom Footer -->
     <div class="border-t border-cyan-500/10 py-6 text-center text-slate-500 text-sm">
-        © 2026 CashMap. All rights reserved.
+        © 2026 in-check calorie counter. All rights reserved.
     </div>
 
 </footer>
