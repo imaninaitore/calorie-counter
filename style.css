@@ -60,6 +60,19 @@ body{
     font-size: 16px;
 }
 
+.food-input{
+    background-color: rgb(48, 65, 81);
+    border-radius: 15px;
+    margin: 30px;
+    padding: 20px;
+     display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
 
-
-    
+.reset-btn{
+    padding: 10px;
+}    
+.add-btn{
+    padding: 10px;
+}
