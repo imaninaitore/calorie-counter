@@ -79,12 +79,15 @@ function saveData() {
 }
 
 // add food
-function addFood(name, calories) {
+function addFood(name, calories,carbs, protein,fat) {
 
     const food = {
         id: Date.now(),
         name,
-        calories
+        calories,
+        carbs,
+        protein,
+        fat
     };
 
     foods.push(food);
@@ -151,8 +154,19 @@ function handleAdd() {
     const calories =
     Number(document.getElementById("foodCalories").value);
 
-    addFood(name, calories);
+    addFood(name, calories, carbs, protein, fat);
 }
 
 // initial load
 renderFoods();
+
+//grab checkboxes
+const carbs =
+document.getElementById("carbs").checked;
+
+const protein =
+document.getElementById("protein").checked;
+
+const fat =
+document.getElementById("fat").checked;
+
