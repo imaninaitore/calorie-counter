@@ -64,19 +64,21 @@ console.error("Error fetching data:", error));
 
 */
 
-//store in array
 let foods = [];
 let total = 0;
 
-//load from local storage
+const foodContainer = document.getElementById("foodContainer");
+const totalCalories = document.getElementById("totalCalories");
+
+// load from localStorage
 foods = JSON.parse(localStorage.getItem("foods")) || [];
 
-//save function
+// save
 function saveData() {
     localStorage.setItem("foods", JSON.stringify(foods));
 }
 
-//add food
+// add food
 function addFood(name, calories) {
 
     const food = {
@@ -91,11 +93,10 @@ function addFood(name, calories) {
     renderFoods();
 }
 
-//display food list
+// render
 function renderFoods() {
 
     foodContainer.innerHTML = "";
-
     total = 0;
 
     foods.forEach(food => {
@@ -122,7 +123,7 @@ function renderFoods() {
     totalCalories.textContent = total;
 }
 
-//delete food
+// delete
 function deleteFood(id) {
 
     foods = foods.filter(food => food.id !== id);
@@ -131,7 +132,7 @@ function deleteFood(id) {
     renderFoods();
 }
 
-//reset all
+// reset (ONLY ONE)
 function resetAll() {
 
     foods = [];
@@ -140,7 +141,18 @@ function resetAll() {
     saveData();
     renderFoods();
 }
-//initial load
-renderFoods();
 
-//connect button
+// add button
+function handleAdd() {
+
+    const name =
+    document.getElementById("foodName").value;
+
+    const calories =
+    Number(document.getElementById("foodCalories").value);
+
+    addFood(name, calories);
+}
+
+// initial load
+renderFoods();
