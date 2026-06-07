@@ -84,10 +84,7 @@ function addFood(name, calories,carbs, protein,fat) {
     const food = {
         id: Date.now(),
         name,
-        calories,
-        carbs,
-        protein,
-        fat
+        calories
     };
 
     foods.push(food);
@@ -96,43 +93,15 @@ function addFood(name, calories,carbs, protein,fat) {
     renderFoods();
 }
 
-// render
+// render foods
 function renderFoods() {
 
     foodContainer.innerHTML = "";
     total = 0;
-    carbsTotal = 0;
-    proteinTotal = 0;
-    fatTotal = 0;
 
     foods.forEach(food => {
 
         total += food.calories;
-
-      // category calculations
-        if(food.carbs){
-            carbTotal += food.calories;
-        }
-
-        if(food.protein){
-            proteinTotal += food.calories;
-        }
-
-        if(food.fat){
-            fatTotal += food.calories;
-        }
-
-             const div = document.createElement("div");
-       
-               const span = document.createElement("span");
-       
-               span.textContent =
-               `${food.name} - ${food.calories} cal`;
-       
-               div.appendChild(span);
-       
-               foodContainer.appendChild(div);
-
 
         const div = document.createElement("div");
 
@@ -150,28 +119,10 @@ function renderFoods() {
         foodContainer.appendChild(div);
 
     });
-    
-// total calories 
+
+// total calories
+
 totalCalories.textContent = total;
-
-const carbPercent =
-(carbTotal / total) * 100;
-
-const proteinPercent =
-(proteinTotal / total) * 100;
-
-const fatPercent =
-(fatTotal / total) * 100;
-
-document.getElementById("carbPercent")
-.textContent = carbPercent.toFixed(1);
-
-document.getElementById("proteinPercent")
-.textContent = proteinPercent.toFixed(1);
-
-document.getElementById("fatPercent")
-.textContent = fatPercent.toFixed(1);
-}
 
 // delete
 function deleteFood(id) {
@@ -182,7 +133,7 @@ function deleteFood(id) {
     renderFoods();
 }
 
-// reset (ONLY ONE)
+// reset 
 function resetAll() {
 
     foods = [];
