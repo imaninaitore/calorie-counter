@@ -34,18 +34,6 @@
                <h2 class="text-total">Total: <span class="span-total" id="totalCalories">0</span></h2>
              </div>
 
-             <div class="stat">
-               <p>Carbs: <span id="carbPercent">0</span>%</p>
-             </div> 
-
-             <div class="stat">
-                <p>Protein: <span id="proteinPercent">0</span>%</p>
-             </div> 
-
-             <div class="stat">
-                <p>Fat: <span id="fatPercent">0</span>%</p>
-             </div> 
-
         </div>
 <!-- edited food container-->
  <div class="food-input">
@@ -80,14 +68,14 @@ onclick="handleAdd()">Add</button>
  class=" reset-btn bg-orange-400 hover:bg-orange-200 text-slate-900 font-semibold py-3 rounded-lg transition duration-300"
 onclick="resetAll()">Reset</button>
 
-<div id="foodContainer"></div>
-
 
 </div>
-<!--food list-->
+
+<div class="foodContainer" id="foodContainer"></div>
+
+<!--food list for fetched data-->
 
 <div id="foodContainer"></div>
-
 
 
 <script src="script.js"></script>

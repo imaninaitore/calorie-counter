@@ -99,3 +99,13 @@ border-radius: 3px;
 
     font-weight: bold;
 }
+
+.foodContainer{
+background-color: rgb(20, 28, 35);
+    border-radius: 15px;
+    margin: 30px;
+    padding: 10px;
+     display: flex;
+    justify-content: space-around;
+    align-items: center
+}
