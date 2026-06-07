@@ -109,6 +109,31 @@ function renderFoods() {
 
         total += food.calories;
 
+      // category calculations
+        if(food.carbs){
+            carbTotal += food.calories;
+        }
+
+        if(food.protein){
+            proteinTotal += food.calories;
+        }
+
+        if(food.fat){
+            fatTotal += food.calories;
+        }
+
+             const div = document.createElement("div");
+       
+               const span = document.createElement("span");
+       
+               span.textContent =
+               `${food.name} - ${food.calories} cal`;
+       
+               div.appendChild(span);
+       
+               foodContainer.appendChild(div);
+
+
         const div = document.createElement("div");
 
         const span = document.createElement("span");
@@ -125,7 +150,8 @@ function renderFoods() {
         foodContainer.appendChild(div);
 
     });
-
+    
+// total calories 
 totalCalories.textContent = total;
 
 const carbPercent =
