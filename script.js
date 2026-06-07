@@ -142,3 +142,5 @@ function resetAll() {
 }
 //initial load
 renderFoods();
+
+//connect button
