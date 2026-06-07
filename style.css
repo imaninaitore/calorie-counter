@@ -109,3 +109,13 @@ background-color: rgb(20, 28, 35);
     justify-content: space-around;
     align-items: center
 }
+.food-data{
+color: antiquewhite;
+font-size: x-large;
+}
+
+#foodContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}

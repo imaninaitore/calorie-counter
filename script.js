@@ -107,6 +107,7 @@ function renderFoods() {
 
         const span = document.createElement("span");
         span.textContent = `${food.name} - ${food.calories} cal`;
+        span.classList.add("food-data");
 
         const btn = document.createElement("button");
         btn.classList.add("delete-btn");
