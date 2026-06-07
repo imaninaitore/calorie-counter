@@ -101,6 +101,9 @@ function renderFoods() {
 
     foodContainer.innerHTML = "";
     total = 0;
+    carbsTotal = 0;
+    proteinTotal = 0;
+    fatTotal = 0;
 
     foods.forEach(food => {
 
@@ -122,6 +125,15 @@ function renderFoods() {
         foodContainer.appendChild(div);
 
     });
+
+const carbPercent =
+(carbTotal / total) * 100;
+
+const proteinPercent =
+(proteinTotal / total) * 100;
+
+const fatPercent =
+(fatTotal / total) * 100;
 
     totalCalories.textContent = total;
 }
@@ -169,4 +181,6 @@ document.getElementById("protein").checked;
 
 const fat =
 document.getElementById("fat").checked;
+
+
 
