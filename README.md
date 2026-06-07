@@ -13,12 +13,10 @@ This is a calorie counter application that allows users to add, manage, and remo
 
 ## technologies used
 - HTML5 for page structure.
-- CSS3 (Tailwind CSS) for styling.
+- CSS3  and Tailwind CSS for styling.
 - JavaScript (ES6+ features) for core logic.
 - DOM Manipulation to update the interface dynamically.
-- Event Handling to capture user actions.
 - localStorage for persistent data storage.
-- Fetch API to simulate getting food calorie data.
 - Git for version control with meaningful commits.
 - Deployment using GitHub Pages
 
@@ -73,6 +71,8 @@ Coding Standards
 *   Test responsiveness across multiple screen sizes before submitting
 .
  # future plans
+ - adding percentage calculation feature for carbs proteins and fats
+ - including fetch data system
  - making a working app with nutrition plans and work out routines
  ## Author 
 Imani Naitore
