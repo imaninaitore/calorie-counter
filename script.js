@@ -109,6 +109,7 @@ function renderFoods() {
         span.textContent = `${food.name} - ${food.calories} cal`;
 
         const btn = document.createElement("button");
+        btn.classList.add("delete-btn");
         btn.textContent = "Delete";
 
         btn.onclick = () => deleteFood(food.id);
@@ -123,7 +124,7 @@ function renderFoods() {
 // total calories
 
 totalCalories.textContent = total;
-
+}
 // delete
 function deleteFood(id) {
 
@@ -157,16 +158,3 @@ function handleAdd() {
 
 // initial load
 renderFoods();
-
-//grab checkboxes
-const carbs =
-document.getElementById("carbs").checked;
-
-const protein =
-document.getElementById("protein").checked;
-
-const fat =
-document.getElementById("fat").checked;
-
-
-

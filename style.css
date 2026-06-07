@@ -65,7 +65,7 @@ body{
     border-radius: 15px;
     margin: 30px;
     padding: 20px;
-     display: flex;
+    display: flex;
     justify-content: space-around;
     align-items: center;
 }
@@ -86,4 +86,16 @@ border-radius: 3px;
 .span-total{
  font-size: 28px;
  color: orange;
+}
+
+.delete-btn{
+    color: red;
+
+    padding: 8px 14px;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    font-weight: bold;
 }
