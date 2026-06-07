@@ -18,24 +18,19 @@ fetch(url)
 const foodContainer = 
 document.getElementById("foodContainer");
 
-
-
-
-
 data.recipes.forEach(food => {
-    
+//creating div 
+const div = document.createElement("div")
 //creating checkbox
-const checkbox =
-document.createElement("input");
-checkbox.type = "checkbox";
-
+const checkbox =document.createElement("input");checkbox.type = "checkbox";
+//creating span
 const span = document.createElement("span");
 
 span.textContent = `${food.name} - ${food.caloriesPerServing} cal`;
 
 foodContainer.appendChild(checkbox);    
 foodContainer.appendChild(span);    
-
+foodContainer.appendChild(div);
 });
 
 })
