@@ -126,6 +126,8 @@ function renderFoods() {
 
     });
 
+totalCalories.textContent = total;
+
 const carbPercent =
 (carbTotal / total) * 100;
 
@@ -135,7 +137,14 @@ const proteinPercent =
 const fatPercent =
 (fatTotal / total) * 100;
 
-    totalCalories.textContent = total;
+document.getElementById("carbPercent")
+.textContent = carbPercent.toFixed(1);
+
+document.getElementById("proteinPercent")
+.textContent = proteinPercent.toFixed(1);
+
+document.getElementById("fatPercent")
+.textContent = fatPercent.toFixed(1);
 }
 
 // delete
