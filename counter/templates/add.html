@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- Set the character encoding -->
+    <meta charset="UTF-8">
+
+    <!-- Make the page responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Set the browser tab title -->
+    <title>Add Food</title>
+
+</head>
+
+<body>
+
+    <!-- Page heading -->
+    <h1>Add Food</h1>
+
+    <!-- Food form -->
+    <form method="POST">
+
+        <!-- Protect the form from CSRF attacks -->
+        {% csrf_token %}
+
+        <!-- Display the FoodForm fields -->
+        {{ form.as_p }}
+
+        <!-- Submit the form -->
+        <button type="submit">Add Food</button>
+
+    </form>
+
+    <!-- Link back to the homepage -->
+    <a href="{% url 'home' %}">Back to Home</a>
+
+</body>
+
+</html>
