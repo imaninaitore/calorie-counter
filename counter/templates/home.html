@@ -3,45 +3,56 @@
 
 <head>
 
-    <!-- Tell the browser which character encoding to use -->
+    <!-- Set the character encoding -->
     <meta charset="UTF-8">
 
-    <!-- Make the website responsive on different screen sizes -->
+    <!-- Make the page responsive -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Set the title shown in the browser tab -->
+    <!-- Set the browser tab title -->
     <title>Calorie Counter</title>
 
 </head>
 
 <body>
 
-    <!-- Main heading for the website -->
+    <!-- Main page heading -->
     <h1>Calorie Counter</h1>
 
-    <!-- Display the total number of calories -->
+    <!-- Display the total calories -->
     <h2>Total Calories: {{ total_calories }}</h2>
 
+    <!-- Button for adding a new food -->
+    <a href="{% url 'add_food' %}">
+        <button type="button">Add Food</button>
+    </a>
 
-    <!-- Section containing the food list -->
+    <hr>
+
+    <!-- Food section heading -->
     <h2>Food Items</h2>
 
-    <!-- Check whether there are any food items -->
+    <!-- Check if food items exist -->
     {% if foods %}
 
-        <!-- Loop through every food item -->
+        <!-- Loop through all food items -->
         {% for food in foods %}
 
             <!-- Display the food name -->
-            <p>Food: {{ food.name }}</p>
+            <h3>{{ food.name }}</h3>
 
-            <!-- Display the calories for the food -->
+            <!-- Display the calories -->
             <p>Calories: {{ food.calories }}</p>
 
             <!-- Display when the food was added -->
             <p>Added: {{ food.date_added }}</p>
 
-            <!-- Add a horizontal line between food items -->
+            <!-- Button for deleting the food -->
+            <a href="{% url 'delete_food' food.id %}">
+                <button type="button">Delete</button>
+            </a>
+
+            <!-- Separate food items -->
             <hr>
 
         <!-- End the food loop -->
@@ -50,7 +61,7 @@
     <!-- If there are no food items -->
     {% else %}
 
-        <!-- Tell the user that no food has been added -->
+        <!-- Display a message -->
         <p>No food items have been added yet.</p>
 
     <!-- End the if statement -->
