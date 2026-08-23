@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- Tell the browser which character encoding to use -->
+    <meta charset="UTF-8">
+
+    <!-- Make the website responsive on different screen sizes -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Set the title shown in the browser tab -->
+    <title>Calorie Counter</title>
+
+</head>
+
+<body>
+
+    <!-- Main heading for the website -->
+    <h1>Calorie Counter</h1>
+
+    <!-- Display the total number of calories -->
+    <h2>Total Calories: {{ total_calories }}</h2>
+
+
+    <!-- Section containing the food list -->
+    <h2>Food Items</h2>
+
+    <!-- Check whether there are any food items -->
+    {% if foods %}
+
+        <!-- Loop through every food item -->
+        {% for food in foods %}
+
+            <!-- Display the food name -->
+            <p>Food: {{ food.name }}</p>
+
+            <!-- Display the calories for the food -->
+            <p>Calories: {{ food.calories }}</p>
+
+            <!-- Display when the food was added -->
+            <p>Added: {{ food.date_added }}</p>
+
+            <!-- Add a horizontal line between food items -->
+            <hr>
+
+        <!-- End the food loop -->
+        {% endfor %}
+
+    <!-- If there are no food items -->
+    {% else %}
+
+        <!-- Tell the user that no food has been added -->
+        <p>No food items have been added yet.</p>
+
+    <!-- End the if statement -->
+    {% endif %}
+
+</body>
+
+</html>
