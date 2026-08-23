@@ -52,7 +52,7 @@ def add_food(request):
     # Display the add food page
     return render(
         request,
-        'add_food.html',
+        'add.html',
         {
             'form': form,
         }
@@ -77,7 +77,7 @@ def delete_food(request, food_id):
     # Display the delete confirmation page
     return render(
         request,
-        'confirm_delete.html',
+        'delete.html',
         {
             'food': food,
         }

@@ -12,8 +12,8 @@ urlpatterns = [
     path('', views.home, name='home'),
 
      # Add a new food item
-    path('add/', views.add_food, name='add'),
+    path('add/', views.add_food, name='add_food'),
 
     # Delete a food item
-    path('delete/<int:food_id>/', views.delete_food, name='delete'),
+    path('delete/<int:food_id>/', views.delete_food, name='delete_food'),
 ]
