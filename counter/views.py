@@ -15,8 +15,7 @@ def home(request):
 
     # Send the food and total calories to the HTML template
     return render(
-        request,
-        'counter/home.html',
+        request, 'home.html',
         {
             'foods': foods,
             'total_calories': total_calories,
